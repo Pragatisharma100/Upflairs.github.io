@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Receiver</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Inbox</h2>
+        <div id="emailList" class="list-group">
+            <!-- Dynamic email items will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script to fetch and display emails from localStorage -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailData = JSON.parse(localStorage.getItem('emailData'));
+            const emailList = document.getElementById('emailList');
+
+            if (emailData) {
+                const emailItem = document.createElement('a');
+                emailItem.className = 'list-group-item list-group-item-action flex-column align-items-start';
+                emailItem.href = '#';
+                emailItem.innerHTML = `
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Recipient: ${emailData.recipientEmail}</h5>
+                        <small>${emailData.timestamp}</small>
+                    </div>
+                    <p class="mb-1">Subject: ${emailData.emailSubject}</p>
+                    <small>Message: ${emailData.emailMessage}</small>
+                `;
+                emailList.appendChild(emailItem);
+            } else {
+                emailList.innerHTML = '<p class="text-center">No emails found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

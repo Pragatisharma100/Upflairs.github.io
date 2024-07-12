@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('static/flight.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="form-container">
+            <h1 class="text-center mb-4">Flight Form</h1>
+            <form action="{{ url_for('flightdata') }}" method="post">
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" id="age" name="person_age" placeholder="Enter Age">
+                </div>
+                <div class="form-group">
+                    <label for="flightDistance">Flight Distance</label>
+                    <input type="number" class="form-control" id="flightDistance" name="flight_distance"
+                        placeholder="Enter Flight Distance">
+                </div>
+                <div class="form-group">
+                    <label for="inflightEntertainment">Inflight Entertainment</label>
+                    <select class="form-control" id="inflightEntertainment" name="inflight_entertainment">
+                        <option value="4">Excellent</option>
+                        <option value="3">Good</option>
+                        <option value="2">Average</option>
+                        <option value="1">Poor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="baggageHandling">Baggage Handling</label>
+                    <select class="form-control" id="baggageHandling" name="baggage_handling">
+                        <option value="4">Excellent</option>
+                        <option value="3">Good</option>
+                        <option value="2">Average</option>
+                        <option value="1">Poor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cleanliness">Cleanliness</label>
+                    <select class="form-control" id="cleanliness" name="cleanliness">
+                        <option value="4">Excellent</option>
+                        <option value="3">Good</option>
+                        <option value="2">Average</option>
+                        <option value="1">Poor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="departureDelay">Departure Delay in Minutes</label>
+                    <input type="number" class="form-control" id="departureDelay" name="departure_delay_in_minutes"
+                        placeholder="Enter Departure Delay in Minutes">
+                </div>
+                <div class="form-group">
+                    <label for="arrivalDelay">Arrival Delay in Minutes</label>
+                    <input type="number" class="form-control" id="arrivalDelay" name="arrival_delay_in_minutes"
+                        placeholder="Enter Arrival Delay in Minutes">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="gender" name="gender_male">
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="customerType">Customer Type</label>
+                    <select class="form-control" id="customerType" name="customer_type_disloyal_customer">
+                        <option value="0">Loyal Customer</option>
+                        <option value="1">Disloyal Customer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="typeOfTravel">Type of Travel</label>
+                    <select class="form-control" id="typeOfTravel" name="type_of_travel_personal_travel">
+                        <option value="0">Business Travel</option>
+                        <option value="1">Personal Travel</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="class">Class_Eco</label>
+                    <select class="form-control" id="class_eco" name="class_eco">
+                        <option value="1">Eco</option>
+                        <option value="0">Eco Plus</option>
+                        <option value="0">Business</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="class">Class_Eco_Plus</label>
+                    <select class="form-control" id="class_eco_plus" name="class_eco_plus">
+                        <option value="0">Eco</option>
+                        <option value="1">Eco Plus</option>
+                        <option value="0">Business</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

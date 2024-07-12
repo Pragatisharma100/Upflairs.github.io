@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Pragati Sharma</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .portfolio-header {
+      background-color: #00a2ff;
+      color: white;
+      padding: 30px 0;
+    }
+    .portfolio-header h1 {
+      margin: 0;
+    }
+    .header-box {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .header-box .nav-link {
+      color: black;
+      margin: 5px;
+      text-align: left;
+    }
+    .header-box .nav-link:hover {
+      color: #007bff;
+    }
+    .linkedin-icon, .github-icon {
+      width: 30px; 
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Section -->
+  <div class="container mt-2">
+    <div class="header-box">
+      <a class="nav-link" href="/"><b>HOME</b></a>
+      <a class="nav-link" href="/education"><b>EDUCATION</b></a>
+      <a class="nav-link" href="/experience"><b>EXPERIENCE</b></a>
+      <a class="nav-link" href="/project"><b>PROJECT</b></a>
+      <a class="nav-link" href="/contact_me"><b>CONTACT ME</b></a>
+      <a class="nav-link" href="/profile"><b>PROFILE</b></a>
+      <a class="nav-link" href="/skills"><b>SKILLS</b></a>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="portfolio-header text-center">
+    <div class="container">
+      <h1>Contact Pragati Sharma</h1>
+      <p class="lead">Aspiring Data Scientist and Software Engineer</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-content mt-5">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>If you would like to contact me or have any inquiries, please fill out the form below:</p>
+      
+      <form action="{{ url_for('userdata') }}" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="user_nmae" class="form-control" id="name" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" name="user_email" class="form-control" id="email" placeholder="Your Email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="user_message" class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

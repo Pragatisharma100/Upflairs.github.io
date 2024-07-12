@@ -1,0 +1,108 @@
+<!-- <html>
+    <head>
+        <title>
+            My FIRST WEBSITE
+        </title>
+    </head>
+    <body>
+        <H2>
+            THIS IS MY FIRST WEBSITE😎😎
+        </H2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Iure aliquam nihil debitis voluptatum accusamus quae corporis,ut expedita maxime ipsum? Nihil omnis sit corporis nesciunt explicabo laudantium porro adipisci architecto?
+        </p>
+    </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/service">My Website</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/service">service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">contact</a>
+          <a class="nav-link" href="/static/resume.pdf">RESUME</a>
+          <a class="nav-link" href="/static/ss.png">SS</a>
+        </li>
+        <img src="/static/ss.png" alt="" width="300" height="300">
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to My Website</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </div>
+
+  <br><br><br>
+  <h2>LIVE QUIZ</h2>
+ <form action="{{  url_for('Quiz') }}" method="post">
+  <label for="">User_Name</label>
+  <input type="text" name="User_Name">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <br><br><br>
+</form>
+ </form>
+  <!-- Content Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Section 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+        <a class="btn btn-secondary" href="#" role="button">View details »</a>
+      </div>
+      <div class="col-md-4">
+        <h2>Section 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+        <a class="btn btn-secondary" href="#" role="button">View details »</a>
+      </div>
+      <div class="col-md-4">
+        <h2>Section 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+        <a class="btn btn-secondary" href="#" role="button">View details »</a>
+      </div>
+    </div>
+  </div>
+  <!-- API IS A COMMUNICATION BETWEEEN A FRONTEND AND BACKEND -->
+
+  <!-- Footer -->
+  <footer class="text-center mt-5 py-4 bg-light">
+    <p>&copy; 2024 My Website. All Rights Reserved.</p>
+  </footer>
+  <img src="/static/ss.png" alt="" width="300" height="300">
+
+  <!-- Bootstrap JavaScript and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
