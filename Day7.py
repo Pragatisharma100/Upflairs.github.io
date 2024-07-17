@@ -10,7 +10,7 @@
 #     ls.append(square)
 
 # EXCEPTION HANDLING......
-# -> exception is unexpected,unwanted,situation
+# -> exception is unexpected,unwanted situation
 # ->runtime error
 # ->compile time error
 # -> Error 

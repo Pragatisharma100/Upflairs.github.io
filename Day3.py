@@ -89,9 +89,9 @@
 # print(dt)
 
 # name ,marks,subject
-student_name={"Name":["Nikita","pragati","arushi"],
-              "Marks":[52,41,96],
-              "Subject":"math"}
+# student_name={"Name":["Nikita","pragati","arushi"],
+#               "Marks":[52,41,96],
+#               "Subject":"math"}
 
 # student_name["Name"].append("Boss")
 # print(student_name)
@@ -103,7 +103,7 @@ student_name={"Name":["Nikita","pragati","arushi"],
 # student_name["Name"][1]="ketan"
 # print(student_name)
 
-print("HELLO WORLD")
-print("HELLO WORLD")
-print("HELLO WORLD")
+# print("HELLO WORLD")
+# print("HELLO WORLD")
+# print("HELLO WORLD")
 
