@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Pollution Data</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://www.example.com/weather-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .table th, .table td {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Air Pollution Data</h1>
+        <div class="form-group">
+            <label for="citySelect">Select City:</label>
+            <select class="form-control" id="citySelect">
+                <option>City 1</option>
+                <option>City 2</option>
+                <option>City 3</option>
+                <!-- Add more cities as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="dateSelect">Select Date:</label>
+            <input type="date" class="form-control" id="dateSelect">
+        </div>
+        <button class="btn btn-primary" onclick="fetchData()">Get Data</button>
+        <div class="mt-4">
+            <h3 class="text-center">Air Quality Index (AQI)</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Date</th>
+                        <th>AQI</th>
+                        <th>Pollutants</th>
+                    </tr>
+                </thead>
+                <tbody id="dataBody">
+                    <!-- Data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function fetchData() {
+            // This function should fetch data based on the selected city and date
+            // For demonstration, we'll use static data
+
+            let city = document.getElementById('citySelect').value;
+            let date = document.getElementById('dateSelect').value;
+
+            // Example static data
+            let data = {
+                "City 1": {
+                    "2024-07-20": { aqi: 120, pollutants: "PM2.5, PM10" },
+                    "2024-07-21": { aqi: 130, pollutants: "PM2.5, PM10, NO2" }
+                },
+                "City 2": {
+                    "2024-07-20": { aqi: 90, pollutants: "PM2.5, O3" },
+                    "2024-07-21": { aqi: 100, pollutants: "PM10, NO2" }
+                }
+            };
+
+            let dataBody = document.getElementById('dataBody');
+            dataBody.innerHTML = "";
+
+            if (data[city] && data[city][date]) {
+                let row = `<tr>
+                            <td>${city}</td>
+                            <td>${date}</td>
+                            <td>${data[city][date].aqi}</td>
+                            <td>${data[city][date].pollutants}</td>
+                           </tr>`;
+                dataBody.innerHTML = row;
+            } else {
+                dataBody.innerHTML = `<tr><td colspan="4" class="text-center">No data available</td></tr>`;
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
