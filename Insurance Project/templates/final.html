@@ -1,9 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Premium Prediction Results</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #3e0fad, #2729a7);
+      color: white;
+    }
+    .navbar, .footer {
+      background: rgba(216, 208, 208, 0.5);
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .btn {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+    }
+    .btn:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+    .result-box {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
 
-<html>
-    <head>
-        <title>Your prediction</title>
-    </head>
-    <body style="background-color: antiquewhite;">
-        <h2 style="text-align: center;  margin-top: 350px; color: rgb(68, 7, 188);">Your prediction here : {{ output }}</h2>
-    </body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/">Insurance Premium Predictor</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/project">Project</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="text-center">Insurance Premium Prediction Results</h2>
+        <p class="text-center">Below are the predicted results based on the information you provided:</p>
+        
+        <!-- <div class="result-box">
+          <h4>Personal Information</h4>
+          <p><strong>Age:</strong> <span id="age">{{age}}</span></p>
+          <p><strong>Gender:</strong> <span id="gender">Male</span></p>
+          <p><strong>Smoker:</strong> <span id="smoker">No</span></p>
+          <p><strong>BMI:</strong> <span id="bmi">22.5</span></p>
+          <p><strong>Region:</strong> <span id="region">Southwest</span></p>
+        </div> -->
+        
+        <div class="result-box">
+          <h4>Predicted Insurance Premium</h4>
+          <p><strong>Premium Amount:</strong> <span id="premium">{{output}}</span></p>
+        </div>
+        
+        <a href="/project" class="btn btn-primary btn-block">Predict Another Premium</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Example data, replace with actual data from your backend
+    // document.getElementById("age").textContent = {{age}};
+    // document.getElementById("gender").textContent = "Female";
+    // document.getElementById("smoker").textContent = "Yes";
+    // document.getElementById("bmi").textContent = "27.8";
+    // document.getElementById("region").textContent = "Southeast";
+    // document.getElementById("premium").textContent = "4500";
+  </script>
+</body>
 </html>

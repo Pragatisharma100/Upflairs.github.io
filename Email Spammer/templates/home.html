@@ -11,7 +11,7 @@
       color: white;
     }
     .navbar, .footer {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(231, 219, 219, 0.5);
     }
     .jumbotron {
       background: rgba(255, 255, 255, 0.1);
@@ -35,7 +35,7 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">Email Classifier</a>
+    <a class="navbar-brand" href="/">Email Classifier</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,7 +45,7 @@
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/about">About</a>
         </li>
       </ul>
     </div>
@@ -66,13 +66,13 @@
         <p class="text-center">Our tool helps you classify your emails into different categories effortlessly. Just write your email in the text box below and let our tool do the magic.</p>
         
         <h3 class="text-center" id="upload">Write Your Email</h3>
-        <form action="{{ url_for('emaildata') }}" method="post"></form>
+        <form action="{{ url_for('emaildata') }}" method="post">
           <div class="form-group">
             <label for="emailText">Email Content</label>
             
-            <textarea class="form-control" name="Email_classification" id="emailText" rows="10" placeholder="Write your email here..."></textarea>
+            <textarea class="form-control" name="message" id="emailText" rows="10" placeholder="Write your email here..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Classify Emails</button>
+          <button type="submit"  class="btn btn-primary btn-block">Classify Emails</button>
         </form>
       </div>
     </div>
