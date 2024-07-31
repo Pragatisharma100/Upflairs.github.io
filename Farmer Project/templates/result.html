@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Results</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+        background: url('static/farmland.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .navbar, .footer {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      color: #000;
+    }
+    .result-box {
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .result-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .btn {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+    }
+    .btn:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/">Farmer Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="text-center">Crop Prediction Results</h2>
+        <p class="text-center">Based on the data you provided, here are the top crop recommendations:</p>
+        <h1>Prediction Result</h1>
+    <h3><p>Prediction: {{ prediction }}</p></h3>
+        {% for label in labels %}
+        <div class="result-box">
+          <h4>{{ label }}</h4>
+          <img src="static/{{ label|lower }}.jpeg" alt="{{ label }}">
+          
+        </div>
+        {% endfor %}
+
+        <a href="/" class="btn btn-primary btn-block">Predict Another Crop</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer text-center py-4">
+    <p> MADE BY PRAGATI SHARMA</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

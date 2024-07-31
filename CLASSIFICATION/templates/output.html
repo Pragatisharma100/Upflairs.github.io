@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classification Results - CUSTOMER SATISFACTION</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #0509f7, #2575fc);
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar, .footer {
+      background: rgba(245, 239, 239, 0.5);
+    }
+    .container {
+      background: rgba(216, 5, 5, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+    }
+    .btn:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+    .result-box {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <b><a class="navbar-brand" href="/">CUSTOMER SATISFACTION</a></nav></b>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="result-box">
+      <h1 class="text-center">SATISFACTION RESULT</h1>
+      <br><br>
+
+      <h3><b><p id="prediction">{{output}}</p></h3></b>
+    </div>
+  </div>
+  <footer class="footer text-center py-4">
+    <p> MADE BY PRAGATI SHARMA</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Example data, replace with actual data from your backend
+    document.getElementById("prediction").textContent = "{{output}}"; 
+  </script>
+</body>
+</html>

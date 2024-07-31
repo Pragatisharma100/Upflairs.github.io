@@ -34,8 +34,9 @@ def flightdata():
 
         # Making prediction
         prediction = model.predict(flight_data)[0]
-        dt = {1:'satisfied',0:'disatisfied'}
-        return str(dt[prediction])
+        dt = {1:'Satisfied',0:'Disatisfied'}
+        # return str(dt[prediction])
+        return render_template('output.html',output= str(dt[prediction]))   
 
 if __name__ == "__main__":
     app.run(debug=True)

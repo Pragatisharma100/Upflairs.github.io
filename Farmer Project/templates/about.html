@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Project</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+        background: url('static/farmland.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .navbar, .footer {
+      background: rgba(252, 245, 245, 0.5);
+    }
+    .jumbotron {
+      background: rgba(247, 243, 243, 0.1);
+      color: rgb(247, 238, 238);
+    }
+    .container {
+      background: rgba(15, 0, 0, 0.63);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .form-control {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+    }
+    .btn {
+      background: rgba(248, 241, 241, 0.8);
+      color: #000;
+    }
+    .btn:hover {
+      background: rgb(202, 63, 63);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/">Farmer Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="about-content">
+          <h2 class="text-center">About This Project</h2>
+          <p>Hello, I am Pragati Sharma. This project is aimed at helping farmers make informed decisions about which crops to plant based on various input parameters like soil nutrients (N, P, K), temperature, humidity, pH, and rainfall.</p>
+          
+          <h4>Project Development</h4>
+          <p>This project was developed using the following technologies and tools:</p>
+          <ul>
+            <li><strong>Python and Flask:</strong> For building the web application backend.</li>
+            <li><strong>Bootstrap:</strong> For designing a responsive and visually appealing user interface.</li>
+            <li><strong>Machine Learning:</strong> A K-Means clustering model was used to predict suitable crops based on the input data. Data preprocessing was done using StandardScaler.</li>
+            <li><strong>HTML/CSS:</strong> For structuring and styling the web pages.</li>
+          </ul>
+
+          <h4>How It Works</h4>
+          <p>The user inputs various parameters like soil nutrients, temperature, humidity, pH level, and rainfall. The input data is processed and fed into a pre-trained machine learning model, which predicts the most suitable crops for the given conditions. The results are then displayed on the results page with images and information about each recommended crop.</p>
+
+          <h4>Benefits for Users</h4>
+          <p>This tool is particularly helpful for farmers who want to optimize their crop yield by selecting the most suitable crops for their land based on scientific data. It takes into account multiple factors that affect crop growth and provides tailored recommendations, making the decision-making process easier and more reliable.</p>
+          
+          <p>By using this tool, farmers can:</p>
+          <ul>
+            <li>Maximize crop yield by selecting the most suitable crops.</li>
+            <li>Make informed decisions based on accurate data analysis.</li>
+            <li>Save time and resources by avoiding trial and error in crop selection.</li>
+          </ul>
+
+          <p>I hope this project will be a valuable resource for farmers and contribute to more efficient and productive farming practices.</p>
+
+          <a href="/" class="btn btn-primary btn-block">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer text-center py-4">
+    <p>MADE BY PRAGATI SHARMA</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
