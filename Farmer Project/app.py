@@ -8,6 +8,10 @@ model = joblib.load(r'F:\Upflairs\Farmer Project\models\kmeans_model')
 
 @app.route('/')
 def home():
+    return render_template("new.html")
+
+@app.route('/home')
+def new():
     return render_template('home.html')
 
 @app.route('/about')

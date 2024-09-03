@@ -1,46 +1,110 @@
-<html>
-    <head>
-        <title>Bike project</title>
-    </head>
-    <body>
-        <h2>Old Bike Price Prediction Project😊😊</h2>
-        <p>
-            THIS IS MY BIKE PRICE PREDICTION PROJECT,WHERE YOU CAN GET PRICE PREDICTION OF OLD DAT
-        </p>
-        <form action="{{  url_for('bikedata') }}" method="post">
-            <Label for="">brand_name:  </Label>
-                <select name="brand_name" id="fifth" required="required">
-                    <option value="2 " >Royal Enfield</option>
-                    <option value="7">KTM</option>
-                    <option value="1">Bajaj</option>
-                    <option value="9">Harley-Davidson</option>
-                    <option value="5">Yamaha</option>
-                    <option value="4">Honda</option>
-                    <option value="8">Suzuki</option>
-                    <option value="6">TVS</option>
-                    <option value="10">Kawasaki</option>
-                    <option value="11">Hyosung</option>
-                    <option value="13">Benelli</option>
-                    <option value="12">Mahindra</option>
-                    <option value="14">Triumph</option>
-                    <option value="15">Ducati</option>
-                    <option value="16">BMW</option>
-                </select><br><br>
-            <label for="">Ownership</label>
-                <select name="owner" id="">
-                    <option value="1">First owner</option>
-                    <option value="2">Second owner</option>
-                    <option value="3">Third owner</option>
-                    <option value="4">Fourth owner</option>
-                </select><br><br>
-            <label for="">kms_driven</label>
-            <input type="text" name="kms_driven"><br><br>
-            <label for="">age</label>
-            <input type="text" name="age"><br><br>
-            <label for="">power</label>
-            <input type="text" name="power"><br><br>
-            <button type="submit">SUBMIT</button>
-            
-        </form>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #1c3aa9, #1a2f8f);
+            color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #ffdd57;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #ffdd57;
+        }
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: #343a40;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.25rem;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Old Bike Price Prediction Project 😊😊</h2>
+    <p>
+        THIS IS MY BIKE PRICE PREDICTION PROJECT, WHERE YOU CAN GET A PRICE PREDICTION FOR OLD BIKES.
+    </p>
+    <form action="{{ url_for('bikedata') }}" method="post">
+        <label for="brand_name">Brand Name:</label>
+        <select name="brand_name" id="fifth" required="required">
+            <option value="2">Royal Enfield</option>
+            <option value="7">KTM</option>
+            <option value="1">Bajaj</option>
+            <option value="9">Harley-Davidson</option>
+            <option value="5">Yamaha</option>
+            <option value="4">Honda</option>
+            <option value="8">Suzuki</option>
+            <option value="6">TVS</option>
+            <option value="10">Kawasaki</option>
+            <option value="11">Hyosung</option>
+            <option value="13">Benelli</option>
+            <option value="12">Mahindra</option>
+            <option value="14">Triumph</option>
+            <option value="15">Ducati</option>
+            <option value="16">BMW</option>
+        </select><br><br>
+
+        <label for="owner">Ownership:</label>
+        <select name="owner" id="">
+            <option value="1">First owner</option>
+            <option value="2">Second owner</option>
+            <option value="3">Third owner</option>
+            <option value="4">Fourth owner</option>
+        </select><br><br>
+
+        <label for="kms_driven">Kilometers Driven:</label>
+        <input type="text" name="kms_driven"><br><br>
+
+        <label for="age">Age of Bike (in years):</label>
+        <input type="text" name="age"><br><br>
+
+        <label for="power">Power (in HP):</label>
+        <input type="text" name="power"><br><br>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
 </html>
